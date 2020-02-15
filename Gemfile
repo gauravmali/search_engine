@@ -29,7 +29,7 @@ gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.gi
 gem 'bootstrap-multiselect-rails', '~> 0.9.9'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap-datepicker-rails'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.4.1'
 gem 'devise'
 gem 'google_drive'
 gem 'ionicons-rails'
