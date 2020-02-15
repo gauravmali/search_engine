@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+*/
+@import "variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-multiselect";
+@import "bootstrap-datepicker";
+@import "ionicons";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url("https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import "navbar";
+@import "searchbar";
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  border-bottom: 15px solid #643bc7;
+}
+
+.form-control {
+  &:focus {
+     box-shadow: none;
+  }
+
+}
+
+.clearfix {
+  &:before {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
+.grid--padding-left-0 {
+  padding-left: 0px;
+  @media screen and (max-width: 992px) {
+    padding-right: 0px;
+  }
+}
+
+.grid--padding-right-0 {
+  padding-right: 0px;
+  @media screen and (max-width: 992px) {
+    padding-left: 0px;
+  }
+}
+
+.btn--rounded {
+  margin-left: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #643bc7;
+}
+
+.alignleft{
+  float: left;
+}
+
+.alignright{
+  float: right;
+}
+
+.scrollable{
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.card{
+  border-bottom: 1px solid #643bc7;
+  border-top: 1px solid #643bc7;
+  border-left: 1px solid #643bc7;
+  border-right: 1px solid #643bc7;
+}
+
+.navbar-search{
+  margin-top: 10px;
+}

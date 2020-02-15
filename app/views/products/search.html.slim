@@ -1,0 +1,10 @@
+.dashboard-search
+  -if @products.blank?
+  - else
+    .col-xs-12.card
+      h2.col-xs-12.card__header
+        | 📦 &nbsp;Available Product List
+      .col-xs-12.card__body
+        = render partial: 'product_list', locals: {product_list: @products}
+      .col-xs-12.text-center.transaction-pagination
+        = render partial: 'shared/pagination'

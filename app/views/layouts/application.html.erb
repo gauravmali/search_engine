@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <%= favicon_link_tag asset_path('spocket.png'), :rel => 'icon', :type =>  'image/png' %>
+  <title>Spocket Search Engine</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+
+<body class="<%= controller_and_action_as_html_class_names %>">
+<%= render 'shared/navbar' %>
+<div id="main-container">
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

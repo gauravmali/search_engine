@@ -1,0 +1,12 @@
+.col-sm-12.col-md-9.col-lg-7.col-md-offset-1.col-lg-offset-2
+  .search-bar
+    = form_with url: search_products_path, class: 'search-bar__form', method: :get, local: true do |form|
+      .input-group
+        .col-md-12
+          = form.text_field :value, class: 'form-control input-lg text-center', id: 'search-bar__input', placeholder: 'Search Products'
+          input name="page" type="hidden" value=1
+          .input-group-btn
+            button.btn.btn-lg type="submit"
+              span.fa-stack.fa
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-search.fa-stack-1x.fa-inverse

@@ -1,0 +1,51 @@
+.card-wrapper {
+  padding: 10px;
+}
+.card {
+  width: 100%;
+  margin-bottom: 15px;
+  margin-bottom: 25px;
+  padding: 20px 30px 40px;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  .card__header {
+    margin-bottom: 25px;
+    font-weight: 500;
+    a {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  input[type="submit"] {
+    margin-top: 10px;
+  }
+  .card__body {
+    .card__list > li {
+      padding: 8px 0px;
+      border-bottom: 1px solid #DEDEDE;
+      font-size: 16px;
+      list-style-type: none;
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
+    .key, .value {
+      display: inline-block;
+      padding: 0px 5px 0px;
+    }
+    .key {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  &.card--admin-dashboard {
+    margin: 10px auto;
+    padding: 30px 20px;
+    color: #333;
+    font-size: 18px;
+  }
+  .card__footer {
+    margin-top: 10px;
+  }
+}

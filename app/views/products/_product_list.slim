@@ -1,0 +1,52 @@
+= render 'detail-modal'
+nav.navbar.navbar-search
+  .container-fluid
+    .navbar-header
+      .col.table-responsive
+        table
+          thead
+            th
+              .col.product-sortTable
+                select#sortingType.custom-select
+                  option selected=""  Sort By
+                  option value=0  Sorted by: Relevance
+                  option value=1  Sorted by: Country
+                  option value=3  Sorted by: Lowest Price
+                  option value=3  Sorted by: Highest Price
+                  option value=4  Sorted by: Newest
+            | &nbsp;
+            th
+              .product-filterCountry
+                select#countryFilter.custom-select
+                  option selected=""  Filter by country
+                  - @countries_array.each_with_index do |country, index|
+                    option value=index
+                      br
+                      = country
+            th
+              input#minAmount min="1" name="minAmount" type="number" placeholder="$ min"
+                input#maxAmount max="1000" name="maxAmount" type="number" placeholder="$ max"
+                button.goAmount-filter Go!
+
+.col.table-responsive
+  table.table#myTable
+    thead
+      th Title
+      th Country
+      th Tags
+      th Price
+    tbody
+      -product_list.each do |product|
+        tr
+          td
+            a.product-detail.btn data-title=product.title data-description=product.description data-country=product.country data-price=product.price
+              =product.title
+          td =product.country
+          td
+            -product.tags.split(',').each do |tag|
+              | &nbsp;
+              span.badge.badge-primary =tag
+          td
+            | $
+            =product.price
+          td.hidden =product.created_at

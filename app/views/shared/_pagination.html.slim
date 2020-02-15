@@ -1,0 +1,32 @@
+-page_no = params['page'].to_i
+-display_offset = 5
+-total_pages = @products.total_pages
+-if total_pages > 1
+  nav aria-label=('Page navigation')
+  ul.pagination
+    -if (page_no - display_offset) > 0
+      li
+        = link_to 'First', search_products_path(type: 'msisdn', value: params['value'], page: 1), method: :get
+      li
+        = link_to 'Previous', search_products_path(type: 'msisdn', value: params['value'], page: (page_no - 1)), method: :get
+      -((page_no - display_offset)..(page_no - 1)).each do |page|
+        li
+          = link_to page.to_s, search_products_path(type: 'msisdn', value: params['value'], page: page), method: :get
+    -else
+      -(1..(page_no - 1)).each do |page|
+        li
+          = link_to page.to_s, search_products_path(type: 'msisdn', value: params['value'], page: page), method: :get
+    li.active
+      a href='#' = params['page']
+    -if (page_no + display_offset) < total_pages
+      -((page_no + 1)..(page_no + display_offset)).each do |page|
+        li
+          = link_to page.to_s, search_products_path(type: 'msisdn', value: params['value'], page: page), method: :get
+      li
+        = link_to 'Next', search_products_path(type: 'msisdn', value: params['value'], page: (page_no + 1)), method: :get
+        li
+          = link_to 'Last', search_products_path(type: 'msisdn', value: params['value'], page: total_pages), method: :get
+    -else
+      -((page_no + 1)..total_pages).each do |page|
+        li
+          = link_to page.to_s, search_products_path(type: 'msisdn', value: params['value'], page: page), method: :get

@@ -1,0 +1,20 @@
+.detail-modal.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        output#productTitle.detail-modal__title.text-center.h3 name="productTitle" type="label" value=""
+      .modal-body
+        ul
+          li
+            h5 Description 📝
+            output#productDescription name="productDescription" type="button" value=""
+          li
+            h5 Country 🌎
+            output#productCountry name="productCountry" type="button" value=""
+          li
+            h5 Price 💰
+            output#productPrice name="productPrice" type="button" value=""
+      .modal-footer
+        button.modal-btn-no.btn.btn-primary type="button"  Cancel

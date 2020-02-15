@@ -1,0 +1,36 @@
+/* Bootstrap global overrides */
+.navbar {
+  border-width: 0px 0px 1px 0px;
+  border-bottom: 1px solid #643bc7;
+  border-top: 1px solid #643bc7;
+  height: 40%;
+  z-index: 1;
+  .navbar__brand {
+    padding: 10px;
+  }
+  .navbar__search {
+    position: absolute;
+    left:30%;
+    margin-left: -40px !important;  /* 50% of your logo width */
+    margin-top: 276px !important;
+    //display: flex;
+    width: 50%;
+
+  }
+  .navbar__brand-image {
+    height: 150%;
+    position: absolute;
+    left: 40%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+  }
+  .navbar__user-actions {
+    margin-right: 0px;
+    .current-executive-name {
+      font-weight: 500;
+    }
+    .caret {
+      margin-left: 5px;
+    }
+  }
+}
