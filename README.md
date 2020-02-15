@@ -1,3 +1,4 @@
 # search_engine
-#### Run rails server, `rails s`
-#### Run Elasticsearch server `./bin/elasticsearch`
+### Pre-Requisites
+> * Run rails server, `rails s`
+> * Run Elasticsearch server `./bin/elasticsearch`
